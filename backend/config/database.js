@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 let _memServer = null;
 
 const connectDB = async () => {
-  let uri = process.env.MONGODB_URI;
+  // Accept both MONGODB_URI and MONGODB_URL (common naming variations)
+  let uri = process.env.MONGODB_URI || process.env.MONGODB_URL;
 
   // Try real MongoDB first; fall back to in-memory server
   try {
