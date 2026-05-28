@@ -1,0 +1,13 @@
+{
+  "name": "qa-management-suite",
+  "version": "1.0.0",
+  "description": "QA Management Suite - Full Stack App",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/server.js"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  }
+}
